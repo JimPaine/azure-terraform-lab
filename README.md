@@ -11,6 +11,8 @@ This session will provider an overview of the different options available for pr
 
 ## Labs
 
+### Hands on with the basics
+
 - [Pre-reqs](/docs/3.prereqs.md)
 - [Lab 1.0 - The Basics](/labs/1.0/README.md)
 - [Lab 1.1 - Adding Resources](/labs/1.1/README.md)
@@ -18,60 +20,34 @@ This session will provider an overview of the different options available for pr
 - [Lab 1.3 - Deletions](/labs/1.3/README.md)
 - [Lab 1.4 - Destroy](/labs/1.4/README.md)
 
-## Exercise 1.3.
+### Making it more usable
 
-Delete the "exercise-1-1.tf" file then run "apply", what will happen?
+- [Lab 2.0 - Variables]() # inc. tfvars
+- [Lab 2.1 - Outputs]()
 
-TODO: pic of delete and portal
+### Run as ...
 
-## Exercise 1.4.
+- [Lab 3.0 - Silently run]() # inc. IAM and AAD
+- [Lab 3.1 - Shared state]() # inc. modifying provider
 
-TODO: Destroy.
+### Working as a team
 
-Exercise 2.0
+- [Lab 4.0 - Source Control]()
+- [Lab 4.1 - CI / CD Pipeline]()
+- [Lab 4.2 - Variable Groups]()
 
-Variables
-Outputs
-tfvars
+### Secure by default
 
-Exercise 3.0
+- [Lab 5.0 - Managed Service Identity with Key Vault]()
 
-Setting up Azure
+### ARM within Terraform, not Terraform within ARM.
 
-Service Principal
-Backend.tf
-Remote State
-Subscription IAM
+- [Lab 6.0 - Using ARM to plug the gaps]()
 
-Exercise 3.1
+### Congifure 3rd Partry resources on Azure
 
-Modify AzureRM Provider
-push changes into GitHub
-Source control benfits
+- [Lab 7.0 - Configuring Kubernetes]()
 
-Exercise 3.2
+### Other concepts 
 
-Pipieline
-Variable groups
-Queue
-
-Exercise 4.0.
-
-ARM within Terraform
-
-Exercise 5.0.
-
-Other resources, K8S? or an NVA?
-
-
-
-
-
-The session will cover:
--	ARM vs Terraform vs Azure CLI and PowerShell
--	Running Terraform locally to provision resources
--	Using Terraform to modify resources and add new to existing
--	Using Terraform within Teams via GitHub
--	Azure DevOps Pipelines to run Terraform across environments
--	ARM resources within Terraform
--	Provisioning and configuring none Azure resources
+- [Lab 8.0 - Modules]()
