@@ -1,3 +1,5 @@
+![infra as code with Terraform](/docs/images/banner.png)
+
 # Deletions
 
 Now we have seen how we can make changes to resources by adding items such as application settings to them and how when they are modified outside of Terraform we can still pick up the changes, lets take a look at what happens when we delete resources from Terraform.

@@ -1,3 +1,5 @@
+![infra as code with Terraform](/docs/images/banner.png)
+
 # Outputs
 
 While you are able to use and reference attributes of resources directly or from the terraform state there are occasions when you will need to output specific values, these could be public endpoints or IP addresses.

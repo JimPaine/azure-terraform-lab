@@ -1,4 +1,4 @@
-TODO : Banner
+![infra as code with Terraform](/docs/images/banner.png)
 
 # The Basics
 

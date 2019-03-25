@@ -1,3 +1,5 @@
+![infra as code with Terraform](/docs/images/banner.png)
+
 # Not infra, but environment
 
 So while the common term used for tooling like Terraform or ARM is Infra as Code it is important to understand that it's a lot more than creating VMs and networks. I personally refer to it as environment as code, mainly because it helps me visually it as something that also includes the setting of things like connections strings, secrets and stuff that people like myself (devs) tend to copy around and forget about. Being able to set things like application settings that are specific to the environment rather than the code also means there is less change and complexity when we run through the application life cycle. 

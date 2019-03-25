@@ -1,3 +1,5 @@
+![infra as code with Terraform](/docs/images/banner.png)
+
 # Variables
 
 A key part of making something re-usable across different environments and teams is to be able to inject different values in, such as names, locations and SKUs. If you look in this lab you will see we have a new empty file called "variables.tf". A great thing about Terraform is you can structure and name the files how ever you like and the Terraform executable will scan the directory and build the tree. 

@@ -1,3 +1,5 @@
+![infra as code with Terraform](/docs/images/banner.png)
+
 # Adding Resources
 
 Now we have created a resource group lets take a look at adding some resources to it. For this portion of the lab we will look at using PaaS Services as this abstracts away a lot of the complexity in creating VNets, NICs and Subnets we would need in a IaaS world. Later examples will show working with these resources.

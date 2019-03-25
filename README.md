@@ -1,6 +1,4 @@
-TODO: Banner
-
-# Infra as Code Hands-on lab using Terraform
+![infra as code with Terraform](/docs/images/banner.png)
 
 This session will provider an overview of the different options available for provisioning environments on Azure and the pros and cons of each. We will then work through a hands-on lab to create DevOps pipelines to maintain environments in Azure using Terraform.
 
