@@ -1,0 +1,39 @@
+queue:
+  name: Hosted Ubuntu 1604
+
+
+variables:
+- group: 'Terraform Service Principal'
+- group: 'Terraform State'
+- name: tfstate_key
+  value: 'jimpaine.pre-ready-2019-H1.master.tfstate'
+- name: resource_name
+  value: 'jp174'
+
+steps:
+
+- task: qetza.replacetokens.replacetokens-task.replacetokens@3
+  displayName: 'Replace tokens in **/*.tfvars'
+
+  inputs:
+    rootDirectory: ./
+    targetFiles: '**/*.tfvars'
+
+- script: |
+   terraform init \
+       -backend-config="resource_group_name=$(tfstate_resource_group)" \
+       -backend-config="storage_account_name=$(tfstate_storage_account)" \
+       -backend-config="container_name=$(tfstate_container)" \
+       -backend-config="key=$(tfstate_key)" \
+       -backend-config="access_key=$(tfstate_access_key)"
+
+  workingDirectory: ./
+  displayName: 'Terraform init'
+
+
+- script: |
+   terraform apply -auto-approve \
+       -var-file="lab.tfvars"
+
+  workingDirectory: ./
+  displayName: 'Terraform apply'
