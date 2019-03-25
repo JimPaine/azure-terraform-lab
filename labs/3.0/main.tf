@@ -7,13 +7,3 @@ resource "azurerm_resource_group" "lab" {
   location = "northeurope"
 }
 
-module "function" {
-  source = "./function"
-
-  resource_group_name = "${azurerm_resource_group.lab.name}"
-  resource_group_location = "${azurerm_resource_group.lab.location}"
-}
-
-output "hostname" {
-    value = "${module.function.hostname}"
-}
