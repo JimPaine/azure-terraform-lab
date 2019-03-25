@@ -25,7 +25,7 @@ This session will provider an overview of the different options available for pr
 
 ### Modules
 
-- [Lab 3.0 - Modules]()
+- [Lab 3.0 - Modules](/labs/3.0/README.md)
 
 ### Run as ...
 
