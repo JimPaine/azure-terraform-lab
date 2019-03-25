@@ -10,7 +10,7 @@ To define a variable you can use the following syntax
 
 ```
 variable "name" {
-  type = string
+  type = "string"
   default = "ABC"
 }
 ```

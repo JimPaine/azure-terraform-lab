@@ -22,32 +22,32 @@ This session will provider an overview of the different options available for pr
 
 ### Making it more usable
 
-- [Lab 2.0 - Variables]() # inc. tfvars
-- [Lab 2.1 - Outputs]()
+- [Lab 2.0 - Variables](/labs/2.0/README.md)
+- [Lab 2.1 - Outputs](/labs/2.1/README.md)
+
+### Modules
+
+- [Lab 3.0 - Modules]()
 
 ### Run as ...
 
-- [Lab 3.0 - Silently run]() # inc. IAM and AAD
-- [Lab 3.1 - Shared state]() # inc. modifying provider
+- [Lab 4.0 - Silently run]() # inc. IAM and AAD
+- [Lab 4.1 - Shared state]() # inc. modifying provider
 
 ### Working as a team
 
-- [Lab 4.0 - Source Control]()
-- [Lab 4.1 - CI / CD Pipeline]()
-- [Lab 4.2 - Variable Groups]()
+- [Lab 5.0 - Source Control]()
+- [Lab 5.1 - Variable Groups]()
+- [Lab 5.2 - CI / CD Pipeline]()
 
 ### Secure by default
 
-- [Lab 5.0 - Managed Service Identity with Key Vault]()
+- [Lab 6.0 - Managed Service Identity with Key Vault]()
 
 ### ARM within Terraform, not Terraform within ARM.
 
-- [Lab 6.0 - Using ARM to plug the gaps]()
+- [Lab 7.0 - Using ARM to plug the gaps]()
 
 ### Congifure 3rd Partry resources on Azure
 
-- [Lab 7.0 - Configuring Kubernetes]()
-
-### Other concepts 
-
-- [Lab 8.0 - Modules]()
+- [Lab 8.0 - Configuring Kubernetes]()
