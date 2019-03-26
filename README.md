@@ -29,7 +29,7 @@ This session will provider an overview of the different options available for pr
 
 ### Run as ...
 
-- [Lab 4.0 - Silently run]() # inc. IAM and AAD
+- [Lab 4.0 - Silently run](/labs/4.0/README.md)
 - [Lab 4.1 - Shared state]() # inc. modifying provider
 
 ### Working as a team
