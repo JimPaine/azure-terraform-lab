@@ -21,3 +21,5 @@ And populate the name, select link from key vault and add the secrets we added e
 ## Step 2 - Add another variable group  
 
 Add a second group in the same way to had before this time for the Terraform State.
+
+## Ensure the Variable Groups were call "TerraformClient" and "TerraformState"
