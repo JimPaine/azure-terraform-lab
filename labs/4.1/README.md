@@ -1,3 +1,5 @@
+![infra as code with Terraform](/docs/images/banner.png)
+
 # Remote state
 
 As well as using a service principal to run Terraform, which allows us to run it in an automated fashion, we also need to store and manage the state in central place, which allows multiple people and or teams to work together across environments.
