@@ -1,4 +1,4 @@
-variable "subscription_id" {}
-variable "client_id" {}
-variable "client_secret" {}
-variable "tenant_id" {}
+variable "subscription-id" {}
+variable "client-id" {}
+variable "client-secret" {}
+variable "tenant-id" {}
