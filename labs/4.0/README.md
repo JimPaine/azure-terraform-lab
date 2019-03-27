@@ -2,7 +2,7 @@
 
 # Service Principal
 
-In this lab we will create a Service Prinicpal and which to use that for further labs. The importance is why we use a service principal and not in how it is created so we have already written the Terraform to create a Service Principal in the Azure AD tenant, give it access to the Azure Subscription we are working against and add the credentials into an Azure Key Vault for our CI / CD pipelines later on.
+In this lab we will create a Service Prinicpal which we will use for further labs. The importance is why we use a service principal and not in how it is created so we have already written the Terraform to create a Service Principal in the Azure AD tenant, give it access to the Azure Subscription we are working against and add the credentials into an Azure Key Vault for our CI / CD pipelines later on.
 
 ## Step 1 - Create the Service Prinicipal
 
@@ -59,4 +59,3 @@ resource "azuread_service_principal_password" "lab" {
   end_date             = "2020-01-01T01:02:03Z"
 }
 ```
-

@@ -59,7 +59,7 @@ data "azuread_user" "lab" {
 }
 
 resource "azurerm_key_vault" "lab" {
-  name                = "lab${random_id.lab.dec}vault"
+  name                = "sp${random_id.lab.dec}vault"
   location            = "${azurerm_resource_group.lab.location}"
   resource_group_name = "${azurerm_resource_group.lab.name}"
   tenant_id           = "${data.azurerm_client_config.lab.tenant_id}"
