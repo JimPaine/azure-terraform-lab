@@ -1,3 +1,5 @@
+[![infra as code with Terraform](/docs/images/banner.png)](/README.md)
+
 # Azure Function Terraform Module
 
 This module wil create an Azure Function on a Consumption plan.
