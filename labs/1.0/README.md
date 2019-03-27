@@ -1,4 +1,4 @@
-![infra as code with Terraform](/docs/images/banner.png)
+[![infra as code with Terraform](/docs/images/banner.png)](/README.md)
 
 # The Basics
 
@@ -88,3 +88,6 @@ You will also now see that we now have a .tfstate while which has been created. 
 ### The results
 
 Open up the portal and if everything worked as expected you will now have a new resource group in your subscription.
+
+# Next Step
+[1.1 Adding Resources](../1.1)

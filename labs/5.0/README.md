@@ -1,4 +1,4 @@
-![infra as code with Terraform](/docs/images/banner.png)
+[![infra as code with Terraform](/docs/images/banner.png)](/README.md)
 
 # Variable Groups
 
@@ -23,3 +23,6 @@ And populate the name, select link from key vault and add the secrets we added e
 Add a second group in the same way to had before this time for the Terraform State.
 
 ## Ensure the Variable Groups were call "TerraformClient" and "TerraformState"
+
+# Next Step
+[5.1 CI / CD Pipeline](../5.1)

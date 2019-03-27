@@ -1,4 +1,4 @@
-![infra as code with Terraform](/docs/images/banner.png)
+[![infra as code with Terraform](/docs/images/banner.png)](/README.md)
 
 # Not infra, but environment
 
@@ -70,3 +70,6 @@ Now from the terminal re-run, what do you think will happen and why?
 ```
 terraform apply
 ```
+
+# Next Step
+[1.3 Deletions](../1.3)

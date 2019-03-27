@@ -1,4 +1,4 @@
-![infra as code with Terraform](/docs/images/banner.png)
+[![infra as code with Terraform](/docs/images/banner.png)](/README.md)
 
 # Destroying an Environment
 
@@ -22,3 +22,5 @@ Simply type into the terminal:
 terraform destroy
 ```
 
+# Next Step
+[2.0 Variables](../2.0)

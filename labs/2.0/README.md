@@ -1,4 +1,4 @@
-![infra as code with Terraform](/docs/images/banner.png)
+[![infra as code with Terraform](/docs/images/banner.png)](/README.md)
 
 # Variables
 
@@ -88,3 +88,6 @@ terraform apply -var-file="lab-2-0.tfvars"
 ```
 
 Now we injecting large amount of files per environment we can simply do it with a single file per environment rather than each individually.
+
+# Next Step
+[2.1 Outputs](../2.1)

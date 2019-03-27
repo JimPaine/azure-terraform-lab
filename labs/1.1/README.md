@@ -1,4 +1,4 @@
-![infra as code with Terraform](/docs/images/banner.png)
+[![infra as code with Terraform](/docs/images/banner.png)](/README.md)
 
 # Adding Resources
 
@@ -74,3 +74,6 @@ What you will notice this time is that we didn't run "terraform init" again. Thi
 What is important this time is that you will spot the output of the plan shows it is going to create some resources and not touch the existing resources.
 
 Open up the portal and validate everything has been created as you expect.
+
+# Next Step
+[1.2 Not infra, but environment](../1.2)

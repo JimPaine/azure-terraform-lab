@@ -1,4 +1,4 @@
-![infra as code with Terraform](/docs/images/banner.png)
+[![infra as code with Terraform](/docs/images/banner.png)](/README.md)
 
 # CI / CD Pipeline
 
@@ -106,4 +106,5 @@ And finally we apply just like we have been so far.
   ![addgroups](/docs/images/addgroups.PNG)
 
   re-run the pipeline and it will now pass.
+
 

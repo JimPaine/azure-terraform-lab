@@ -1,4 +1,4 @@
-![infra as code with Terraform](/docs/images/banner.png)
+[![infra as code with Terraform](/docs/images/banner.png)](/README.md)
 
 # Service Principal
 
@@ -59,3 +59,6 @@ resource "azuread_service_principal_password" "lab" {
   end_date             = "2020-01-01T01:02:03Z"
 }
 ```
+
+# Next Step
+[4.1 Shared state](../4.1)
