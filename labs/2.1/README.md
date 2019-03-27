@@ -30,3 +30,7 @@ terraform apply -var-file="lab-2-1.tfvars"
 ```
 
 Grab the output value and navigate to the hostname, which should take you to the current hosted function app.
+
+
+# Next Step
+[3.0 Modules](../3.0)

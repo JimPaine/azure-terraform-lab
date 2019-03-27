@@ -36,3 +36,6 @@ What this will do now is create a storage account and give our Terraform client 
 
 ## Step 2 - Lets take a look at what it has created for us.
 
+
+# Next Step
+[5.0 Variable Groups](../5.0)

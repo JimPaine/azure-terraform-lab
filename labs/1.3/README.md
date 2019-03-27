@@ -71,3 +71,7 @@ Run apply and note the output of the plan
 ```
 terraform apply
 ```
+
+
+# Next Step
+[1.4 Destroy](../1.4)

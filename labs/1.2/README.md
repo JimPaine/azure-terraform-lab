@@ -70,3 +70,6 @@ Now from the terminal re-run, what do you think will happen and why?
 ```
 terraform apply
 ```
+
+# Next Step
+[1.3 Deletions](../1.3)

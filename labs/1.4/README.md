@@ -22,3 +22,5 @@ Simply type into the terminal:
 terraform destroy
 ```
 
+# Next Step
+[2.0 Variables](../2.0)
