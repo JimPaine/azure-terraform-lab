@@ -89,5 +89,21 @@ And finally we apply just like we have been so far.
   
   Build Pipelines > New Build Pipeline > Repos
 
-  Select the repo we have been working with and it should automatically pick up our build
+  Select the repo we have been working with and it should automatically pick up our build. 
+
+  There is a known issue here which is that it will only let you run the build.
+
+  ![run](/docs/images/yaml.PNG)
+
+  Click run and the build will fail.
+
+  ![fail](/docs/images/fail.PNG)
+
+  Now we can go back edit the build and link in our Variable groups from before.
+
+  ![link](/docs/images/edit.PNG)
+
+  ![addgroups](/docs/images/addgroups.PNG)
+
+  re-run the pipeline and it will now pass.
 
