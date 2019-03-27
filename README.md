@@ -35,7 +35,7 @@ This session will provider an overview of the different options available for pr
 ### Working as a team
 
 - [Lab 5.0 - Variable Groups](/labs/5.0/README.md)
-- [Lab 5.1 - CI / CD Pipeline]()
+- [Lab 5.1 - CI / CD Pipeline](/labs/5.1/README.md)
 
 ### Secure by default
 

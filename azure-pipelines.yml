@@ -9,13 +9,6 @@ variables:
 
 steps:
 
-- task: qetza.replacetokens.replacetokens-task.replacetokens@3
-  displayName: 'Replace tokens in **/*.tfvars'
-
-  inputs:
-    rootDirectory: ./env
-    targetFiles: '**/*.tfvars'
-
 - script: |
    terraform init \
        -backend-config="resource_group_name=$(resource-group)" \
@@ -30,7 +23,10 @@ steps:
 
 - script: |
    terraform apply -auto-approve \
-       -var-file="lab.tfvars"
+       -var="client-id=$(client-id)" \
+       -var="client-secret=$(client-secret)" \
+       -var="subscription-id=$(subscription-id)" \
+       -var="tenant-id=$(tenant-id)"
 
   workingDirectory: ./env
   displayName: 'Terraform apply'
