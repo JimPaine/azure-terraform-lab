@@ -1,4 +1,4 @@
-![infra as code with Terraform](/docs/images/banner.png)
+[![infra as code with Terraform](/docs/images/banner.png)](/README.md)
 
 # Modules
 
