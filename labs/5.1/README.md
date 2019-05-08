@@ -2,7 +2,7 @@
 
 # CI / CD Pipeline
 
-Now we have our Infra as Code stored in source control and secure variable groups sourced from key vault we will now build out our pipeline for our enviornment. This wlll be what we we use to run and execute the Terraform just like we have been locally.
+Now we have our Infra as Code stored in source control and secure variable groups sourced from key vault we will now build out our pipeline for our environment. This will be what we use to run and execute the Terraform just like we have been locally.
 
 # Step 1 - Backend
 
@@ -25,9 +25,9 @@ terraform {
 
 We can leave these items comennted out as what is important here is that Terraform is aware we want to use Azure as the backend, the rest of the items we will set when the pipeline is run.
 
-## Step 2 - Yaml Pipeline
+## Step 2 - YAML Pipeline
 
-You will notice on the root directory there is a "azure-pipelines.yml" This file is picked up and used to define our Azure DevOps Pipeline. Lets take a look at what is is doing.
+You will notice on the root directory there is a "azure-pipelines.yml".  This file is picked up and used to define our Azure DevOps Pipeline. Let's take a look at what is is doing.
 
 The first thing that is important here is that we are using the hosted Ubuntu image, this is key because this image is the one that has the terraform client install by default.
 
@@ -36,7 +36,7 @@ queue:
   name: Hosted Ubuntu 1604
 ```
 
-Next we tell the pipeline that we want to import the variable groups we created in the previous labs and add a specific key used to store the state as.
+Next, we tell the pipeline that we want to import the variable groups we created in the previous labs and add a specific key used to store the state as.
 
 ```
 variables:
@@ -57,7 +57,7 @@ Next we transform or .tfvars file with the values for this specific environment,
     targetFiles: '**/*.tfvars'
 ```
 
-Now we can intiaialise Terraform, take note that we are now passing in the values of the storage account we created in previous labs.
+Now we can intiaialise Terraform. Take note that we are now passing in the values of the storage account we created in previous labs.
 
 ```
 - script: |
@@ -72,7 +72,7 @@ Now we can intiaialise Terraform, take note that we are now passing in the value
   displayName: 'Terraform init'
 ```
 
-And finally we apply just like we have been so far.
+And finally, we apply just like we have been so far.
 
 ```
 - script: |

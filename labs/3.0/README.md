@@ -2,13 +2,13 @@
 
 # Modules
 
-Modules are a way we can package up a directory, not only is this a great way to define and re-use terraform it is also a great way to structure files by creating an abstraction over multiple resource. Lets take our Azure Function we have been working with so far, to create the function we have needed the following
+Modules are a way we can package up a directory, not only is this a great way to define and re-use terraform it is also a great way to structure files by creating an abstraction over multiple resources. Let's take our Azure Function we have been working with so far, to create the function we have needed the following
 
 - Azure Service Plan
 - Storage Account
 - Azure Function
 
-While this example there isn't that many dependant resources for something simple like a VM you would need more:
+While this example there isn't that many dependent resources for something simple like a VM you would need more:
 
 - VNet
 - Subnet
@@ -19,11 +19,11 @@ While this example there isn't that many dependant resources for something simpl
 
 ## Step 1 - Creating a module
 
-A module requires variables, outputs and resources and should be wrapped up in a directory with a README.md. Take a look in this lab directory, there is a sub directory called "function" this module takes in some variables creates an Azure Function App a long with all its dependancies and outputs some values.
+A module requires variables, outputs and resources and should be wrapped up in a directory with a README.md. Take a look in this lab directory, there is a sub-directory called "function" this module takes in some variables creates an Azure Function App along with all its dependencies and outputs some values.
 
 ## Step 2 - Using a module
 
-To use a module we need to add a reference to it from our parent Terraform files. In the example below you can see we create a reference to a module in a certain directory and set a variable value.
+To use a module we need to add a reference to it from our parent Terraform files. In the example below, you can see we create a reference to a module in a certain directory and set a variable value.
 
 ```
 module "name" {
@@ -41,7 +41,7 @@ You may want to refer to the README.md within the module to understand what vari
 
 ## Step 3 - Initialise the environment
 
-Using a terminal opened at the root of the lab directory run the following.
+Using a terminal opened at the root of the lab directory, run the following.
 
 ```
 terraform init
@@ -77,7 +77,7 @@ Now re-apply Terraform
 terraform apply
 ```
 
-While this is shows you can output the outputs of a module what is also great is that it means we can use the outputs from one module as inputs to another, which really lets us get clever with the way we build out abstractions for resources in Azure.
+While this shows you can output the outputs of a module what is also great is that it means we can use the outputs from one module as inputs to another, which really lets us get clever with the way we build out abstractions for resources in Azure.
 
 # Next Step
 [4.0 Silently run](../4.0)

@@ -2,11 +2,11 @@
 
 # Adding Resources
 
-Now we have created a resource group lets take a look at adding some resources to it. For this portion of the lab we will look at using PaaS Services as this abstracts away a lot of the complexity in creating VNets, NICs and Subnets we would need in a IaaS world. Later examples will show working with these resources.
+Now we have created a resource group lets take a look at adding some resources to it. For this portion of the lab we will look at using PaaS Services as this abstracts away a lot of the complexity in creating VNets, NICs and Subnets we would need in an IaaS world. Later examples will show working with these resources.
 
 ## Step 1 - Add an App Service Plan
 
-You will spot inside main.tf I have already got the basics from the previous lab included to help us move forward quickly. So lets get started by adding the service plan. As mentioned in the previous lab type this out to get a feel for the VSCode extensions.
+You will notice, inside main.tf, I have already added the basics from the previous lab included to help us move forward quickly. So let's get started by adding the service plan. As mentioned in the previous lab type this out to get a feel for the VSCode extensions.
 
 ```
 resource "azurerm_app_service_plan" "lab" {
@@ -22,7 +22,7 @@ resource "azurerm_app_service_plan" "lab" {
 }
 ```
 
-The key things to notice here are we are using the "${}" syntax to reference other resources we have created, allowing us to re-use things like the name and location of the resource group without using variables or having to manually re-construct them each time like we do in ARM templates.
+The key things to notice here are we are using the "${}" syntax to reference other resources we have created, allowing us to re-use items such as the name and location of the resource group without using variables or having to manually re-construct them each time just as we do in ARM templates.
 
 Now run:
 
