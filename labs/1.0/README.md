@@ -4,11 +4,11 @@
 
 In this exercise we are simply going to create a resource group within Azure. While the steps we take to do this may seem like overkill they will lay the foundations for the rest of the lab environment we will create.
 
-In this directory you will see a file named "main.tf" open that file as this will be were we add the providers and resources for this lab.
+In this directory you will see a file named "main.tf".  Open "main.tf" as this will be where we add the providers and resources for this lab.
 
 ## Step 1 - Providers
 
-Lets add the AzureRM resource provider of a specific version. To do this add the following to main.tf
+Let's add the AzureRM resource provider of a specific version. To do this add the following to main.tf
 
 ```
 provider "azurerm" {
@@ -28,7 +28,8 @@ provider "random" {
 
 ## Step 2 - Resource Group
 
-Now we have setup the providers we need, we will now create our resource group and link our random generator to it so we get a unique but consist value for the life span of our resource group.
+Now we have set up the providers we need, we will now create our resource group and link our random generator to it so we get a unique but consistent
+value for the life span of our resource group.
 
 While you could easily copy and paste the code example below trying typing it out and get a feel of the VSCode extensions.
 
@@ -81,9 +82,9 @@ terraform apply
 
 This will now create a plan and show us the output of the plan. You can see that it shows it wants to create a single resource and not delete or change any, which is good. 
 
-Type in "yes" and hit enter and it will go a head and create the resource.
+Type in "yes" and hit enter and it will go ahead and create the resource.
 
-You will also now see that we now have a .tfstate while which has been created. Open it up and take a look as this is the current "known good" state of our environment.
+You will also now see that we now have a .tfstate while which has been created. Open it up and take a look. This file is where we store the current "known good" state of our environment.
 
 ### The results
 

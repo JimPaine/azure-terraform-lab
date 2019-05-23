@@ -14,13 +14,13 @@ terraform init
 terraform apply -var="user=[azurelogin@email.com]"
 ```
 
-So lets take a look through so we understand what it is doing.
+So let's take a look through so we understand what it is doing.
 
 ## Step 2 - Azure AD provider
 
 If you take a look in the main.tf file you will notice we are using a new provider called "AzureAD" This provider allows us to work with Azure AD without a need to use or understand subscriptions or resource groups. You can then see from this provider we create a few resources.
 
-Firstly we create an Azure application, this is needed as it is what we will use when we want to authenticate and for setting RBAC permissions against subscriptions and resources. We have to set a few core items that we won't be using but because the application can also be used for user flows and app to app authentications items like the uris are required.
+Firstly we create an Azure application, this is needed as it is what we will use when we want to authenticate and for setting RBAC permissions against subscriptions and resources. We have to set a few core items that we won't be using but because the application can also be used for user flows and app to app authentications items like the URIs are required.
 
 ```
 resource "azuread_application" "lab" {
@@ -41,7 +41,7 @@ resource "azuread_service_principal" "lab" {
 }
 ```
 
-Because everything we do we want to be secure we generate a random pssword to use with our new service prinicpal, ideally we would then put this only into Key Vault but for the purpose of the lab we will also output it.
+Because everything we do we want to be secure we generate a random password to use with our new service prinicpal, ideally we would then put this only into Key Vault but for the purpose of the lab we will also output it.
 
 ```
 resource "random_string" "lab" {
@@ -50,7 +50,7 @@ resource "random_string" "lab" {
 }
 ```
 
-And finally we set the password of our service prinicpal with the randomly generated password.
+And finally, we set the password of our service prinicpal with the randomly generated password.
 
 ```
 resource "azuread_service_principal_password" "lab" {

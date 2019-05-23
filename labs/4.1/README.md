@@ -4,7 +4,7 @@
 
 As well as using a service principal to run Terraform, which allows us to run it in an automated fashion, we also need to store and manage the state in central place, which allows multiple people and or teams to work together across environments.
 
-So before we create a way to store the state, lets update the Azure Provider to use the service principal from the previous lab.
+So before we create a way to store the state, let's update the Azure Provider to use the service principal from the previous lab.
 
 ## Step 1 - Running the Azure Provider with a service principal
 
@@ -34,7 +34,7 @@ terraform apply -var-file="lab-4-1.tfvars"
 
 What this will do now is create a storage account and give our Terraform client access to the BLOB storage account.
 
-## Step 2 - Lets take a look at what it has created for us.
+## Step 2 - Let's take a look at what it has created for us.
 
 
 # Next Step
