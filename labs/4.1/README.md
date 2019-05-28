@@ -2,11 +2,68 @@
 
 # Remote state
 
-As well as using a service principal to run Terraform, which allows us to run it in an automated fashion, we also need to store and manage the state in central place, which allows multiple people and or teams to work together across environments.
+As well as using a service principal to run Terraform, which allows us to run it in an automated fashion, we also need to store and manage the state in acentral place, which allows multiple people and or teams to work together across environments.
 
-So before we create a way to store the state, let's update the Azure Provider to use the service principal from the previous lab.
+## Step 1 - Adding a storage account
 
-## Step 1 - Running the Azure Provider with a service principal
+To do this we need to create a storage account, add the below to the previous main.tf file, this will allow us to store the state file.
+
+```
+resource "azurerm_storage_account" "lab" {
+  name                     = "terraformstate${random_id.lab.dec}"
+  resource_group_name      = "${data.azurerm_resource_group.lab.name}"
+  location                 = "${data.azurerm_resource_group.lab.location}"
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+}
+
+resource "azurerm_storage_container" "lab" {
+  name                  = "state"
+  resource_group_name   = "${data.azurerm_resource_group.lab.name}"
+  storage_account_name  = "${azurerm_storage_account.lab.name}"
+  container_access_type = "private"
+}
+```
+
+## Step 2 - Next put the values in a key vault.
+
+```
+resource "azurerm_key_vault_secret" "storage-account" {
+    name = "storage-account"
+    value = "${azurerm_storage_account.lab.name}"
+    vault_uri = "${azurerm_key_vault.lab.vault_uri}"
+}
+
+resource "azurerm_key_vault_secret" "container-name" {
+    name = "container-name"
+    value = "${azurerm_storage_container.lab.name}"
+    vault_uri = "${azurerm_key_vault.lab.vault_uri}"
+}
+
+resource "azurerm_key_vault_secret" "access-key" {
+    name = "access-key"
+    value = "${azurerm_storage_account.lab.primary_access_key}"
+    vault_uri = "${azurerm_key_vault.lab.vault_uri}"
+}
+```
+
+## Step 3 - (Optionally add the values to the output)
+
+```
+output "storage-account" {
+    value = "${azurerm_storage_account.lab.name}"
+}
+
+output "container-name" {
+    value = "${azurerm_storage_container.lab.name}"
+}
+
+output "access-key" {
+    value = "${azurerm_storage_account.lab.primary_access_key}"
+}
+```
+
+## Step 4 - Setting the provider.
 
 To run the provider with the service principal we need to update the provider details in main.tf. Below is an example of what the provider should look like.
 
@@ -20,21 +77,47 @@ provider "azurerm" {
 }
 ```
 
-Update the main.tf file now and add the required variables to variables.tf and lab-4-1.tfvars.
+## Step 5 - Setting the backend
 
-Now provision the environment for this lab with
-
-```
-terraform init
-```
+Add a new file called backend.tf and add the following.
 
 ```
-terraform apply -var-file="lab-4-1.tfvars"
+terraform {
+  backend "azurerm" {
+    #example properties
+    #resource_group_name  = ""
+    #storage_account_name = ""
+    #container_name       = ""
+    #key                  = ""
+    #access_key           = ""
+  }
+}
+```
+
+You will notice that the values are all commented out, this is because we don't want these values set in source control and passed in when we execute the script.
+
+## Step 6 - Running it!
+
+Now to run it we are going to run the "terraform init" command and pass in the values to use for the backend. This will set were terraform stores and uses the statefile.
+
+```
+terraform init \
+       -backend-config="resource_group_name=[tfstate_resource_group]" \
+       -backend-config="storage_account_name=[storage-account]" \
+       -backend-config="container_name=[container-name]" \
+       -backend-config="key=demo.tfstate" \
+       -backend-config="access_key=[access-key]"
+```
+
+Now when we want to apply our configuration we can call the apply, just like below.
+
+```
+terraform apply -var="user=[azurelogin@email.com]"
 ```
 
 What this will do now is create a storage account and give our Terraform client access to the BLOB storage account.
 
-## Step 2 - Let's take a look at what it has created for us.
+## Step 7 - Let's take a look at what it has created for us.
 
 
 # Next Step
