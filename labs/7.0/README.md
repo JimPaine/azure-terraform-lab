@@ -111,4 +111,4 @@ resource "azurerm_template_deployment" "lab" {
 
 ## Step 3 - Run it and see!
 
-Now let's run terraform apply and take a look at the environment via the portal!
+Now let's push the changes into our git repo and take a look at the environment via the portal!
