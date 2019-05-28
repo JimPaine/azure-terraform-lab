@@ -29,4 +29,3 @@ steps:
        -var="tenant-id=$(tenant-id)"
 
   workingDirectory: ./env
-  displayName: 'Terraform apply'
