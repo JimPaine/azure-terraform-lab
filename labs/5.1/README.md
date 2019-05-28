@@ -107,4 +107,5 @@ And finally, we apply just like we have been so far.
 
   re-run the pipeline and it will now pass.
 
-
+# Next Step
+[6.0 Secure by default](../6.0)

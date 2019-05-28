@@ -39,11 +39,11 @@ This session will provider an overview of the different options available for pr
 
 ### Secure by default
 
-- [Lab 6.0 - Managed Service Identity with Key Vault]()
+- [Lab 6.0 - Managed Service Identity with Key Vault](/labs/6.0/README.md)
 
 ### ARM within Terraform, not Terraform within ARM.
 
-- [Lab 7.0 - Using ARM to plug the gaps]()
+- [Lab 7.0 - Using ARM to plug the gaps](/labs/7.0/README.md)
 
 ### Congifure 3rd Partry resources on Azure
 

@@ -83,7 +83,5 @@ resource "azurerm_key_vault_access_policy" "functionmsi" {
   ]
 }
 ```
-
-
-
-
+# Next Step
+[7.0 Using ARM to fill the Gaps](../7.0)
