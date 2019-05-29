@@ -1,0 +1,23 @@
+{
+    "name": "TerraformLab",
+    "dockerFile": "Dockerfile",
+    "runArgs": [
+		//  Uncomment the next line if you want to use Docker from the container. See the docker-in-docker definition for details.
+        "-v"
+        // "/var/run/docker.sock:/var/run/docker.sock",
+
+		// Uncomment the next two lines if you will use a ptrace-based debugger like C++, Go, and Rust
+		// "--cap-add=SYS_PTRACE",
+		// "--security-opt", "seccomp=unconfined"
+    ],
+    "settings":  { 
+        "window.zoomLevel": 0,
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "files.eol": "\n"
+    },
+    "extensions": [
+        "ms-azuretools.vscode-azureterraform",
+        "mauve.terraform",
+        "ms-vscode.vscode-node-azure-pack"
+    ]
+}
