@@ -45,6 +45,13 @@ resource "azurerm_key_vault_secret" "access-key" {
     value = "${azurerm_storage_account.lab.primary_access_key}"
     vault_uri = "${azurerm_key_vault.lab.vault_uri}"
 }
+
+
+resource "azurerm_key_vault_secret" "resource-group" {
+    name = "resource-group"
+    value = "${azurerm_resource_group.lab.name}"
+    vault_uri = "${azurerm_key_vault.lab.vault_uri}"
+}
 ```
 
 ## Step 3 - (Optionally add the values to the output)
@@ -60,6 +67,10 @@ output "container-name" {
 
 output "access-key" {
     value = "${azurerm_storage_account.lab.primary_access_key}"
+}
+
+output "resource_group" {
+  value = "${azurerm_resource_group.lab.name}"
 }
 ```
 
@@ -102,7 +113,7 @@ Now to run it we are going to run the "terraform init" command and pass in the v
 
 ```
 terraform init \
-       -backend-config="resource_group_name=[tfstate_resource_group]" \
+       -backend-config="resource_group_name=[resource-group]" \
        -backend-config="storage_account_name=[storage-account]" \
        -backend-config="container_name=[container-name]" \
        -backend-config="key=demo.tfstate" \
