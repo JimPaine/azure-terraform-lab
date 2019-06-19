@@ -12,7 +12,7 @@ Let's add the AzureRM resource provider of a specific version. To do this add th
 
 ```
 provider "azurerm" {
-  version = "1.22"
+  version = "1.28"
 }
 ```
 
@@ -22,7 +22,7 @@ We also want to add the "random" provider, as we have already discussed this wil
 
 ```
 provider "random" {
-  version = "1.3"
+  version = "2.1"
 }
 ```
 

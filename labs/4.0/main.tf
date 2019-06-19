@@ -1,5 +1,5 @@
 provider "azurerm" {
-  version = "1.22"
+  version = "1.28"
 }
 
 provider "azuread" {
@@ -7,7 +7,7 @@ provider "azuread" {
 }
 
 provider "random" {
-  version = "1.3"
+  version = "2.1"
 }
 
 resource "azurerm_resource_group" "lab" {
