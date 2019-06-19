@@ -28,7 +28,7 @@ resource "azurerm_function_app" "lab" {
   
   version = "~2"
 
-  app_settings {
+  app_settings = {
     ABC = "XYZ"
   }
 }

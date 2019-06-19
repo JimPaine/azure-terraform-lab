@@ -1,9 +1,9 @@
 provider "azurerm" {
-  version = "1.22"
+  version = "1.28"
 }
 
 provider "random" {
-  version = "1.3"
+  version = "2.1"
 }
 
 resource "random_id" "lab" {
