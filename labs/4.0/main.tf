@@ -1,13 +1,13 @@
-provider "azurerm" {
-  version = "1.22"
+provider "azuread" {
+  version = "~> 0.4"
 }
 
-provider "azuread" {
-  version = "0.2"
+provider "azurerm" {
+  version = "~> 1.30.1"
 }
 
 provider "random" {
-  version = "1.3"
+  version = "~> 2.1"
 }
 
 resource "azurerm_resource_group" "lab" {
@@ -59,7 +59,7 @@ data "azuread_user" "lab" {
 }
 
 resource "azurerm_key_vault" "lab" {
-  name                = "${random_id.lab.dec}vault"
+  name                = "vault${random_id.lab.dec}"
   location            = "${azurerm_resource_group.lab.location}"
   resource_group_name = "${azurerm_resource_group.lab.name}"
   tenant_id           = "${data.azurerm_client_config.lab.tenant_id}"
@@ -78,6 +78,7 @@ resource "azurerm_key_vault" "lab" {
       "list",
       "set",
       "get",
+      "delete"
     ]
   }
 }
