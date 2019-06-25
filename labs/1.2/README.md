@@ -45,7 +45,7 @@ resource "azurerm_function_app" "lab" {
   
   ...  
 
-  app_settings {
+  app_settings = {
       ABC = "XYZ"
   }
 }

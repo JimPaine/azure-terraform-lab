@@ -27,10 +27,10 @@ RUN apt-get -y install \
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
 # Install terraform 0.12
-RUN wget https://releases.hashicorp.com/terraform/0.12.0/terraform_0.12.0_linux_amd64.zip
-RUN unzip terraform_0.12.0_linux_amd64.zip
+RUN wget https://releases.hashicorp.com/terraform/0.12.3/terraform_0.12.3_linux_amd64.zip
+RUN unzip terraform_0.12.3_linux_amd64.zip
 RUN mv terraform /usr/local/bin
-RUN rm terraform_0.12.0_linux_amd64.zip
+RUN rm terraform_0.12.3_linux_amd64.zip
 
 # Clean up
 RUN apt-get autoremove -y \

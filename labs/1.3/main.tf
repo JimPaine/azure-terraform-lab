@@ -1,9 +1,9 @@
 provider "azurerm" {
-  version = "1.22"
+  version = "~> 1.30.1"
 }
 
 provider "random" {
-  version = "1.3"
+  version = "~> 2.1"
 }
 resource "azurerm_resource_group" "lab" {
   name     = "lab-1-3"
@@ -47,7 +47,7 @@ resource "azurerm_function_app" "lab" {
   
   version = "~2"
 
-  app_settings {
+  app_settings = {
     ABC = "XYZ"
   }
 }
