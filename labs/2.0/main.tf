@@ -1,9 +1,9 @@
 provider "azurerm" {
-  version = "1.22"
+  version = "~> 1.30.1"
 }
 
 provider "random" {
-  version = "1.3"
+  version = "~> 2.1"
 }
 resource "azurerm_resource_group" "lab" {
   name     = "lab-2-0"
@@ -25,8 +25,8 @@ resource "azurerm_app_service_plan" "lab" {
   kind                = "FunctionApp"
 
   sku {
-    tier = "Dynamic"
-    size = "Y1"
+    tier = "${var.sku-tier}"
+    size = "${var.sku-size}"
   }
 }
 
@@ -47,6 +47,6 @@ resource "azurerm_function_app" "lab" {
   
   version = "~2"
 
-  app_settings {
+  app_settings = {
   }
 }
